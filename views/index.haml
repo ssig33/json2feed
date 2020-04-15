@@ -1,0 +1,29 @@
+!!! html
+%title JSON to Feed
+%link(rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css")
+%link(rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css")
+%link(rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css")
+%body
+  .section.section-hero
+    .grid-hero.container.grid-lg.text-center
+      %h1 JSON to Feed
+      %h2 Create Feed
+      %form(action='/feed')
+        .form-group
+          %label.form-label(for='url') URL
+          %input.form-input#url{type: 'text', placeholder: 'URL', name: 'url'}
+        .form-group
+          %label.form-label(for='ids') Query of IDs (stq style)
+          %input.form-input#ids{type: 'text', placeholder: 'Query of IDs', name: 'ids'}
+        .form-group
+          %label.form-label(for='titles') Query of Titles (stq style)
+          %input.form-input#titles{type: 'text', placeholder: 'Query of Titles', name: 'titles'}
+        .form-group
+          %label.form-label(for='urlbase') Base of URL
+          %input.form-input#urlbase{type: 'text', placeholder: 'Base of URL', name: 'urlbase'}
+        %div
+          %button.btn.btn-primary Submit
+        %div
+          %a{href: 'https://ssig33.com', target: '_blank'} @ssig33
+        %div
+          %a{href: 'https://github.com/ssig33/json2feed', target: '_blank'} source
