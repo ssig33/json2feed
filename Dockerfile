@@ -1,4 +1,4 @@
-FROM ruby:2.7
+FROM ruby:latest
 RUN echo 'deb-src http://deb.debian.org/debian buster main' >> /etc/apt/sources.list
 RUN apt update && apt install jq -y && apt build-dep jq -y
 RUN mkdir /app
